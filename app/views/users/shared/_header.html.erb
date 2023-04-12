@@ -73,7 +73,7 @@
           -->
           <div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 focus:outline-none divide-y divide-gray-100" 
           role="menu" id="menu-dropdown-items"
-          aria-orientation="vertical" 
+          aria-orientation="vertical"
           aria-labelledby="user-menu-button" tabindex="-1"
           data-transition-enter="transition ease-out duration-100"
           data-transition-enter-start="transform opacity-0 scale-95"
@@ -132,4 +132,4 @@
   </nav>
 
 </header>
-<%= render "users/shared/modal" %>
+<%= render "users/shared/modal" , modal_content: "users/homes/user_auth_form" %>

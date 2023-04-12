@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Users::Users", type: :request do
+RSpec.describe "Users::UsersByEmails", type: :request do
   let!(:user) { create(:user) }
   describe "GET /show" do
     let(:headers) do
