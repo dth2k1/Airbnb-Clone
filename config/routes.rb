@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   namespace :users do
     resources :users, only: :show
-    get "/users_by_email/:email" => "users_by_emails#show", as: :users_by_email, format: :json
+    get "/users_by_emails/:email" => "users_by_emails#show", param: :email, constraints: { email: /.*/ }
   end
 end
