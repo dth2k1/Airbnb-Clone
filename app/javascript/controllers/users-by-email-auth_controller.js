@@ -7,6 +7,8 @@ export default class extends Controller {
     this.submitTarget.addEventListener('click', (e)=> {
       e.preventDefault();
       if(this.emailTarget.value.length == 0) {
+        this.errorMessageTarget.classList.remove("hidden");
+        this.clearMessage()
       } else {
         axios.get(`/users/users_by_emails/${this.emailTarget.value}`, {
           headers: {
@@ -21,6 +23,12 @@ export default class extends Controller {
           // handle error
         })
       }
+    })
+  }
+
+  clearMessage(){
+    this.emailTarget.addEventListener('keyup', (e)=> {
+      this.errorMessageTarget.classList.add("hidden");
     })
   }
 }
