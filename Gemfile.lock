@@ -135,6 +135,8 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    faker (3.1.1)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     figaro (1.2.0)
       thor (>= 0.14.0, < 2)
@@ -344,6 +346,7 @@ DEPENDENCIES
   debug
   devise
   factory_bot_rails
+  faker
   figaro
   importmap-rails
   jbuilder
@@ -374,4 +377,4 @@ RUBY VERSION
    ruby 3.0.4p208
 
 BUNDLED WITH
-   2.3.26
+   2.4.2

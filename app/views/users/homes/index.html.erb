@@ -1,1 +1,13 @@
-<h1> Hello World~ </h1>
+<div class="flex">
+  <% @properties.each do |property| %>
+    <div>
+      <p><%= property.name %>
+      <p><%= property.title %>
+      <p><%= property.country %>
+      <p><%= property.address1 %>
+      <p><%= property.city %>
+      <p><%= property.state %>
+      <p><%= property.description %>
+    </div>
+  <% end %>
+<div>
