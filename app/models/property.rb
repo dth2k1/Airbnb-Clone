@@ -12,7 +12,17 @@ class Property < ApplicationRecord
   validates :avatar, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'], size_range: 1..(5.megabytes) }
   validates :image_details, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'], size_range: 1..(5.megabytes) }
 
+  geocoded_by :address
   before_create :set_avatar
+
+  #TODO change code to line one
+  # after_validation :geocode, if: ->(obj){obj.address1.present? and obj.address1_changed? }
+  after_validation :geocode, if: ->(obj){ obj.longitude.blank? and obj.latitude.blank? }
+
+  def address
+    # [address1, address2, city, state, country].compact.join(', ')
+    [state, country].compact.join(', ')
+  end
 
   private
 
