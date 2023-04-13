@@ -1,0 +1,8 @@
+:verbose: false
+:concurrency: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+:max_retries: 3
+:timeout: 30
+:queues:
+  - mailers
+  - default
+  - mail_log

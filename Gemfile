@@ -54,9 +54,10 @@ gem "devise"
 gem "cancancan"
 gem "kaminari"
 gem "redis-rails"
-gem "sidekiq"
+gem "sidekiq", '~> 6.5.7'
 gem "stripe"
 gem "rails-i18n"
+gem 'activestorage-validator'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -71,7 +72,6 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
   gem 'letter_opener'
   gem 'bullet'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
