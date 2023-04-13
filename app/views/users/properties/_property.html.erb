@@ -6,7 +6,7 @@
     </button>
   </div>
   <p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"><%= property.city %>, <%= property.state %> <%= property.country %></p>
-  <p class="block text-sm font-medium text-gray-500 pointer-events-none">78km</p>
+  <p class="block text-sm font-medium text-gray-500 pointer-events-none"><%= if current_user.present ? current_user.set_distance(property.longitude, property.latitude) : "20km" %></p>
   <p class="block text-sm font-medium text-gray-500 pointer-events-none">Jun 19-24</p>
   <p class="block text-sm font-medium text-gray-500 pointer-events-none">100$ per night</p>
 </li>
