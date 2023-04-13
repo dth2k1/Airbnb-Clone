@@ -57,7 +57,8 @@ gem "redis-rails"
 gem "sidekiq", '~> 6.5.7'
 gem "stripe"
 gem "rails-i18n"
-gem 'activestorage-validator'
+gem "activestorage-validator"
+gem "geocoder"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
