@@ -4,7 +4,7 @@ class CreateProperties < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :owner
       t.string :title
-      t.integer :state
+      t.string :state
       t.text :description
       t.string :city
       t.string :address1
