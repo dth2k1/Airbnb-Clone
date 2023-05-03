@@ -12,6 +12,7 @@ class Property < ApplicationRecord
   validates :avatar, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'], size_range: 1..(5.megabytes) }
   validates :image_details, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'], size_range: 1..(5.megabytes) }
 
+  monetize :price_cents, allow_nil: true
   geocoded_by :address
   before_create :set_avatar
 

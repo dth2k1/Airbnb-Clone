@@ -183,6 +183,15 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.18.0)
+    monetize (1.12.0)
+      money (~> 6.12)
+    money (6.16.0)
+      i18n (>= 0.6.4, <= 2)
+    money-rails (1.15.0)
+      activesupport (>= 3.0)
+      monetize (~> 1.9)
+      money (~> 6.13)
+      railties (>= 3.0)
     msgpack (1.7.0)
     mysql2 (0.5.5)
     net-imap (0.3.4)
@@ -348,6 +357,7 @@ DEPENDENCIES
   jbuilder
   kaminari
   letter_opener
+  money-rails (~> 1.12)
   mysql2 (~> 0.5)
   pry-byebug
   pry-rails
@@ -372,4 +382,4 @@ RUBY VERSION
    ruby 3.0.4p208
 
 BUNDLED WITH
-   2.4.2
+   2.3.26
