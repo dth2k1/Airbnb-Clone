@@ -8,6 +8,7 @@ class Property < ApplicationRecord
   validates :country, presence: true
 
   has_many_attached :images
+  has_many :reviews, as: :reviewable
   validates :images, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'], size_range: 1..(5.megabytes) }
 
   monetize :price_cents, allow_nil: true
@@ -21,6 +22,10 @@ class Property < ApplicationRecord
   def address
     # [address1, address2, city, state, country].compact.join(', ')
     [state, country].compact.join(', ')
+  end
+
+  def caculate_rating
+    self.reviews.average(:rating).round(1)
   end
 
   private
