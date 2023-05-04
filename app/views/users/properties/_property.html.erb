@@ -1,6 +1,6 @@
 <li class= "relative">
   <div class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
-    <%= image_tag property.avatar, class: "object-cover pointer-events-none group-hover:opacity-75"  if property.avatar.attached? %>
+    <%= image_tag property.images.first, class: "object-cover pointer-events-none group-hover:opacity-75"  if property.images.attached? %>
     <button type="button" class="absolute inset-0 focus:outline-none">
       <span class="sr-only">View details for IMG_4985.HEIC</span>
     </button>
