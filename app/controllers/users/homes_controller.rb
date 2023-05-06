@@ -1,4 +1,5 @@
 class Users::HomesController < ApplicationController
+  include FavoriteHelper
   def index
     @properties = Property.all
   end
