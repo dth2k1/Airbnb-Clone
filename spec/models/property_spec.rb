@@ -14,5 +14,7 @@ RSpec.describe Property, type: :model do
 
   describe "association" do
     it { should have_many(:reviews) }
+    it { should have_many(:favorites) }
+    it { should have_many(:favorited_users).through(:favorites).source(:user) }
   end
 end
